@@ -168,7 +168,7 @@ function ShippingAI::SetCompanyName()
 			"Navion", "Frontline", "Jeppesen", "Westfal-Larsen", "Wilson", "Eidesvik", "East India", 
 			"Orient", "Father", "Occident", "West India", "Far East", "Seaway", "Fred Olsen", 
 			"Red Band", presName, presName, "Neptune", "Poseidon", "Greate Lakes", "Siem", "Havila",
-			"Holland America", "Torm", "East Aisatic", "Hamburg Süd", "Atlas", "Costamare", "Excel",
+			"Holland America", "Torm", "East Asiatic", "Hamburg Süd", "Atlas", "Costamare", "Excel",
 			"Eimskip", "Belship", "Borgstad", "Det Stavangerske", "Eidsiva", "Eitzen", "Golar", "Grieg",
 			"Odfjell", "Stolt-Nielsen", "Wallenius Wilhelmsen", "Wilhelm Wilhelmsen", "Polsteam",
 			"Portline", "Histria", "Shakalin", "Sovcomflot", "African and Eastern", "African", "Bibby",
@@ -675,8 +675,7 @@ function ShippingAI::BuildDock(near, cargo)
 	if (dockName) {
 		local i = 0;
 		local myDockName = AITown.GetName(AITile.GetClosestTown(near)) + dockName;
-		local extension = [ "North", "South", "East", "West", "Central", "Riverside", "Beach", 
-			"Seafront", "Lakeside", "Main", " Hub" ];
+		local extension = [ "Riverside", "Beach", "Seafront", "Lakeside", "Main", " Hub" ];
 		while (!AIBaseStation.SetName(dockID, myDockName)) {
 			i++;
 			myDockName = AITown.GetName(AITile.GetClosestTown(near)) + " " + 
